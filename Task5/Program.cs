@@ -146,7 +146,7 @@ class Div : IVisitable
    public readonly IVisitable Left, Right;
 
 }
-
+ 
 class Fct : IVisitable
 {
     public readonly IVisitable Expr;
