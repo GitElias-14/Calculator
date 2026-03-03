@@ -12,3 +12,4 @@ C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\refint\Task5.dll
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.pdb
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.genruntimeconfig.cache
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\ref\Task5.dll
+C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.sourcelink.json

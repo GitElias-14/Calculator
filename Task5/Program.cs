@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 interface IVisitable {
    void Accept(IVisitor vtor);
@@ -12,6 +13,7 @@ interface IVisitor {
    void Visit(Mul elem);
    void Visit(Div elem);
    void Visit(Fct elem);
+   void Visit(Max elem);
 }
 
 class Evaluator: IVisitor {
@@ -61,9 +63,14 @@ class Evaluator: IVisitor {
         result *= i;
         
          s.Push(result);
-         
-
     }
+   public void Visit(Max e)
+   {
+      
+
+
+   }
+   
 
 
    public void Clear() => s.Clear();
@@ -92,11 +99,11 @@ class Stringifier: IVisitor {
       e.Right.Accept(this);
    }
   public void Visit(Div e)
-{   s.Append("(");
+{  
     e.Left.Accept(this);
     s.Append("/");
     e.Right.Accept(this);
-    s.Append(")");
+    
 }
 
 public void Visit(Fct e)
@@ -158,6 +165,23 @@ class Fct : IVisitable
     public void Accept(IVisitor vtor) => vtor.Visit(this);
 }
 
+class  Max : IVisitable , IEnumerable<IVisitable>
+{
+   public readonly List<IVisitable> Expr;
+
+   public Max(List<IVisitable> expr)
+   {
+      Expr = expr;
+   }
+
+    public void Accept(IVisitor vtor) => vtor.Visit(this);
+
+    public IEnumerator<IVisitable> GetEnumerator( int index)
+   {
+       return Expr[index];
+   }
+   
+}
 class FactorialOfNegativeException : ArgumentException
 {
     public FactorialOfNegativeException()
@@ -166,9 +190,32 @@ class FactorialOfNegativeException : ArgumentException
     }
 }
 
+class MaxItrator : IEnumerator<IVisitable>
+{
+   private Max _maxClass;
+   private int _index;
+
+   public MaxItrator(Max maxClass)
+   {
+      _maxClass = maxClass;
+      _index = -1;
+   
+   }
+   
+   public IVisitable Current => _maxClass.Get(_index);
+   
+   
+   
+
+   public void Dispose(){}
+   
+}
+
+
+
 class Program {
    static void Main() {
-   IVisitable t = new Fct(new Literal(-5));
+   IVisitable t = new Fct(new Literal(5));
 Console.WriteLine(new Stringifier(t) + "=" + new Evaluator(t));
    }
 }
