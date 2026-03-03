@@ -262,32 +262,15 @@ class MaxItrator : IEnumerator<IVisitable>
 
 
 class Program {
-   static void Main() {
-        try
-    {
-        IVisitable t = new Max(new List<IVisitable> {
+   static void Main()
+   {
+       IVisitable t = new Max(new List<IVisitable> {
             new Add(new Literal(-2), new Literal(9)),  // = 7
             new Literal(6),
             new Literal(0)
         });
 
-        Console.WriteLine($"{new Stringifier(t)} = {new Evaluator(t)}");
-    }
-    catch (ArgumentException)
-    {
-        Console.WriteLine("passed arguments are not correct");
-    }
-
-    // 2️⃣ Tom lista (ska kasta exception)
-    try
-    {
-        IVisitable empty = new Max(new List<IVisitable>());
-        Console.WriteLine($"{new Stringifier(empty)} = {new Evaluator(empty)}");
-    }
-    catch (ArgumentException)
-    {
-        Console.WriteLine("passed arguments are not correct");
-    }
+         Console.WriteLine($"{new Stringifier(t)} = {new Evaluator(t)}");
    }
 }
 
