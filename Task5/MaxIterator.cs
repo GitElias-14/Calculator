@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.ExceptionServices;
 
-class MaxItrator : IEnumerator<IVisitable>
+class MaxIterator : IEnumerator<IVisitable>
 {
    private readonly List<IVisitable> list;
    private int _index = -1;
 
-   public MaxItrator(List<IVisitable> list)
+   public MaxIterator(List<IVisitable> list)
    {
       this.list = list;
    
