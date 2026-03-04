@@ -13,3 +13,18 @@ C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.pdb
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.genruntimeconfig.cache
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\ref\Task5.dll
 C:\Users\elias\Desktop\Calculator\task5\obj\Debug\net10.0\Task5.sourcelink.json
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\bin\Debug\net10.0\Task5.exe
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\bin\Debug\net10.0\Task5.deps.json
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\bin\Debug\net10.0\Task5.runtimeconfig.json
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\bin\Debug\net10.0\Task5.dll
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\bin\Debug\net10.0\Task5.pdb
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.AssemblyInfoInputs.cache
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.AssemblyInfo.cs
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.csproj.CoreCompileInputs.cache
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.sourcelink.json
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.dll
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\refint\Task5.dll
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.pdb
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\Task5.genruntimeconfig.cache
+C:\Users\JOTO\OneDrive - Mälardalens universitet\Csharp\Calculator\Task5\obj\Debug\net10.0\ref\Task5.dll

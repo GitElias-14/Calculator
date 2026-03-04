@@ -4,10 +4,6 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.ExceptionServices;
 
-
-
-
-
 class Stringifier: IVisitor {
    public Stringifier(IVisitable t) {
       s = new StringBuilder();
@@ -16,48 +12,25 @@ class Stringifier: IVisitor {
    public void Visit(Literal e) {
       s.Append(e.Value);
    }
-   public void Visit(Add e) {
-      s.Append("(");
-      e.Left.Accept(this);
-      s.Append("+");
-      e.Right.Accept(this);
-      s.Append(")");
-   }
-   public void Visit(Mul e) {
-      e.Left.Accept(this);
-      s.Append("*");
-      e.Right.Accept(this);
-   }
-  public void Visit(Div e)
-{  
-    e.Left.Accept(this);
-    s.Append("/");
-    e.Right.Accept(this);
-    
-}
+   public void Visit(Add e) => StringifierAgg(new[] {e.Left, e.Right}, "(",")","+");
+   public void Visit(Mul e) => StringifierAgg(new[] {e.Left, e.Right}, null, null, "*");
+   public void Visit(Div e) => StringifierAgg(new[] {e.Left, e.Right}, null, null, "/");
+   public void Visit(Fct e) => StringifierAgg(new[] {e.Expr}, "(", ")!", null);
+   public void Visit(Max e) => StringifierAgg(e, "max{", "}",",");
 
-public void Visit(Fct e)
-{
-    s.Append("(");
-    e.Expr.Accept(this);
-    s.Append(")!");
-}
-
-public void Visit(Max e)
-{
-   s.Append("max{");
-   bool first = true;
-
-    foreach (var arg in e)
+   private void StringifierAgg(IEnumerable<IVisitable> expr, string? prefix, string? suffix, string? separator)
    {
-      if (!first) s.Append(",");
-      arg.Accept(this);
-      first = false;
+      if (prefix != null) s.Append(prefix);
+      bool first = true;
+      foreach (var arg in expr)
+      {
+         if (!first && separator != null) s.Append(separator);
+         arg.Accept(this);
+         first = false;
+      }
+      if (suffix != null) s.Append(suffix);
    }
 
-   s.Append("}");
-      
-}
    public void Clear() => s.Clear();
    public override string ToString() => s.ToString();
    private StringBuilder s;

@@ -8,24 +8,32 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\elias\\.nuget\\packages\\": {}
+    "C:\\Users\\JOTO\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\elias\\Desktop\\Calculator\\Task5\\Task5.csproj",
+      "projectUniqueName": "C:\\Users\\JOTO\\OneDrive - Mälardalens universitet\\Csharp\\Calculator\\Task5\\Task5.csproj",
       "projectName": "Task5",
-      "projectPath": "C:\\Users\\elias\\Desktop\\Calculator\\Task5\\Task5.csproj",
-      "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\elias\\Desktop\\Calculator\\Task5\\obj\\",
+      "projectPath": "C:\\Users\\JOTO\\OneDrive - Mälardalens universitet\\Csharp\\Calculator\\Task5\\Task5.csproj",
+      "packagesPath": "C:\\Users\\JOTO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JOTO\\OneDrive - Mälardalens universitet\\Csharp\\Calculator\\Task5\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\JOTO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
